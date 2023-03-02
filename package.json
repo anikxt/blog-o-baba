@@ -5,7 +5,7 @@
   "scripts": {
     "install": "cd server && npm install && cd ../client && npm install && cd ../",
     "build": "cd client && npm run build && mkdir ../server/public && cp -r build/* ../server/public",
-    "start": "cd server && npm start"
+    "start": "cd server && npm run start"
   },
   "author": "Aniket Kanere",
   "license": "ISC"
