@@ -1,10 +1,11 @@
 module.exports = {
   development: {
-    username: 'blaze',
-    password: '440024',
-    database: 'TutorialDB',
-    host: 'localhost',
+    username: process.env.MYSQLUSER,
+    password: process.env.MYSQLPASSWORD,
+    database: process.env.MYSQLDATABASE,
+    host: process.env.MYSQLHOST,
     dialect: 'mysql',
+    use_env_variable: process.env.MYSQL_URL,
   },
   test: {
     username: 'root',
@@ -19,6 +20,6 @@ module.exports = {
     database: process.env.MYSQLDATABASE,
     host: process.env.MYSQLHOST,
     dialect: 'mysql',
-    use_env_variable:process.env.MYSQL_URL,
+    use_env_variable: process.env.MYSQL_URL,
   },
 };
