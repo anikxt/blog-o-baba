@@ -45,7 +45,7 @@ function CreatePost() {
           <ErrorMessage name="title" component="span"></ErrorMessage>
           <Field
             autocomplete="off"
-            id="inputCreatePost"
+            id="inputCreatePostUsername"
             name="title"
             placeholder="(Ex. Title...)"
           />
@@ -54,7 +54,7 @@ function CreatePost() {
           <ErrorMessage name="postText" component="span"></ErrorMessage>
           <Field
             autocomplete="off"
-            id="inputCreatePost"
+            id="inputCreatePostPassword"
             name="postText"
             placeholder="(Ex. Post...)"
           />
