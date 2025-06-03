@@ -28,7 +28,7 @@ function Home() {
           );
         });
     }
-  }, [navigate]);
+  }, []);
 
   const likeAPost = (postId) => {
     axios

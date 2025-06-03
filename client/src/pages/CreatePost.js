@@ -16,7 +16,7 @@ function CreatePost() {
     if (!localStorage.getItem('accessToken')) {
       navigate('/login');
     }
-  }, [navigate]);
+  }, []);
 
   const validationSchema = Yup.object().shape({
     title: Yup.string().required('You must input a Title!'),

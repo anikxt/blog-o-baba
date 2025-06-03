@@ -20,7 +20,7 @@ function Post() {
     axios.get(`/comments/${id}`).then((response) => {
       setComments(response.data);
     });
-  }, [id]);
+  }, []);
 
   const addComment = () => {
     axios
