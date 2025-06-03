@@ -1,13 +1,10 @@
-import React, { useContext, useEffect } from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { ErrorMessage, Field, Form, Formik } from 'formik';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 import axios from '../axios.config';
-import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../helpers/AuthContext';
 
 function CreatePost() {
-  const { authState } = useContext(AuthContext);
-
   let navigate = useNavigate();
 
   const initialValues = {
@@ -19,7 +16,7 @@ function CreatePost() {
     if (!localStorage.getItem('accessToken')) {
       navigate('/login');
     }
-  }, []);
+  }, [navigate]);
 
   const validationSchema = Yup.object().shape({
     title: Yup.string().required('You must input a Title!'),

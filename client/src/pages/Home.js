@@ -1,14 +1,11 @@
-import React from 'react';
-import axios from '../axios.config';
-import { useEffect, useState, useContext } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
-import { AuthContext } from '../helpers/AuthContext';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from '../axios.config';
 
 function Home() {
   const [listOfPosts, setListOfPosts] = useState([]);
   const [likedPosts, setLikedPosts] = useState([]);
-  const { authState } = useContext(AuthContext);
 
   let navigate = useNavigate();
 
@@ -31,7 +28,7 @@ function Home() {
           );
         });
     }
-  }, []);
+  }, [navigate]);
 
   const likeAPost = (postId) => {
     axios
