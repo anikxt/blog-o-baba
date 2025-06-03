@@ -1,7 +1,7 @@
 import Axios from 'axios';
 
 const axios = Axios.create({
-  baseURL: 'https://blog-o-baba-production.up.railway.app',
+  baseURL: process.env.REACT_APP_API_URL,
   responseType: 'json',
 });
 
